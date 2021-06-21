@@ -78,12 +78,17 @@ const PersonalFinance: FunctionComponent = () => {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const name: string = event.target.name;
-    const value: string | number = event.target.value;
+    let value: string | number = event.target.value;
+    if (name === 'minPaymentPercentage' || name === 'balance') {
+      value = +value;
+    }
     setAddDebtFormState({ ...addDebtFormState, [name]: value });
   };
 
   const handleSubmit = () => {
-    const id: number = financeData[financeData.length - 1]['id'] + 1;
+    const id: number = financeData.length
+      ? financeData[financeData.length - 1]['id'] + 1
+      : 1;
     const newDebtEntry: FinanceDataModel = { ...addDebtFormState, id };
     const newData: FinanceDataModel[] = [...financeData, newDebtEntry];
     setFinanceData(newData);
@@ -120,6 +125,7 @@ const PersonalFinance: FunctionComponent = () => {
       }
     );
     setFinanceData(newFinanceDataState);
+    setSelected([]);
   };
 
   const toggleAddDebtForm = () => {
@@ -164,7 +170,6 @@ const PersonalFinance: FunctionComponent = () => {
           onChange={handleChange}
         />
         <TextField
-          required
           id='outlined-basic'
           label='Min Pay %'
           name='minPaymentPercentage'
@@ -173,7 +178,6 @@ const PersonalFinance: FunctionComponent = () => {
           onChange={handleChange}
         />
         <TextField
-          required
           id='outlined-basic'
           label='Balance'
           name='balance'
