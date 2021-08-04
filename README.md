@@ -1,4 +1,4 @@
-# SFS React Test - Pat Petillo
+# React Test - Pat Petillo
 
 ## Available Scripts
 

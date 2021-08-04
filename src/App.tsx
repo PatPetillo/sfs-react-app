@@ -5,8 +5,8 @@ import PersonalFinance from './pages/PersonalFinance/PersonalFinance';
 const App: FunctionComponent = () => {
   return (
     <Switch>
-      <Route path='/'>
-        <Redirect to='/personal-finance' />
+      <Route path="/">
+        <Redirect to="/personal-finance" />
         <PersonalFinance />
       </Route>
     </Switch>

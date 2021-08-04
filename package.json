@@ -1,5 +1,5 @@
 {
-  "name": "sfs-react-test",
+  "name": "react-test-pat-petillo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,6 +46,12 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.7"
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
   }
 }
