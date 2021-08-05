@@ -1,0 +1,22 @@
+@use '../variables';
+
+#addDebtButton {
+  margin-right: 1rem;
+}
+
+.titleRow {
+  background: variables.$primary-color;
+  border: 1px solid black;
+  outline: 1px solid black !important;
+}
+
+.table {
+  border: 1px solid black;
+  outline: 1px solid black !important;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}

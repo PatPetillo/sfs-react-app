@@ -1,0 +1,29 @@
+@use '../variables';
+
+.container {
+  display: flex;
+  height: 3rem;
+  background-color: variables.$primary-color;
+  margin-top: 1rem;
+  outline: 1px solid black;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.total {
+  margin-left: 1rem;
+}
+
+.debt {
+  margin-right: 3rem;
+}
+
+.totalRowCount {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.rowCountContainer {
+  display: flex;
+  outline: 1px solid black;
+}
